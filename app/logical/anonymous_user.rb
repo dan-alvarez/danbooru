@@ -209,6 +209,14 @@ class AnonymousUser
     false
   end
 
+  def saved_searches
+    []
+  end
+
+  def has_saved_searches?
+    false
+  end
+
   %w(member banned gold builder platinum contributor janitor moderator admin).each do |name|
     define_method("is_#{name}?") do
       false
